@@ -1,0 +1,87 @@
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Baskent</groupId>
+  <artifactId>Baskent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <geotools.version>32-SNAPSHOT</geotools.version>
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
+  
+<dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-shapefile</artifactId>
+      <version>${geotools.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-swing</artifactId>
+      <version>${geotools.version}</version>
+    </dependency>   
+    <dependency>
+      <groupId>org.xerial</groupId>
+      <artifactId>sqlite-jdbc</artifactId>
+      <version>3.45.3.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.13</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>2.0.13</version>
+    </dependency>
+    
+</dependencies>
+  <repositories>
+    <repository>
+    <id>osgeo</id>
+    <name>OSGeo Release Repository</name>
+    <url>https://repo.osgeo.org/repository/release/</url>
+    <snapshots><enabled>false</enabled></snapshots>
+    <releases><enabled>true</enabled></releases>
+    </repository>
+    <repository>
+    <id>osgeo-snapshot</id>
+    <name>OSGeo Snapshot Repository</name>
+    <url>https://repo.osgeo.org/repository/snapshot/</url>
+    <snapshots><enabled>true</enabled></snapshots>
+    <releases><enabled>false</enabled></releases>
+    </repository>
+  </repositories>
+  
+  
+  
+  
+  
+  
+  
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+        <configuration>
+          <release>21</release>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+  
+  
+  
+</project>
